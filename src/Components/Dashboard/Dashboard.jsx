@@ -5,8 +5,11 @@ const Dashboard = () => {
     const [cartProduct, setCartProduct] = useContext(CartProduct);
     const [wishProduct, setWishProduct] = useContext(WishProduct);
     const [activeTab, setActiveTab] = useState("cart");
+    const [purchaseAmount, setPurchaseAmount] = useState(0); // State to store purchase amount for modal
+
     const totalPrice = cartProduct.reduce((price, product) => price + product.price, 0);
-    // Sorting
+
+    // Sorting function
     const sortByPrice = () => {
         const sortedProducts = [...cartProduct].sort((a, b) => b.price - a.price);
         setCartProduct(sortedProducts);
@@ -17,12 +20,15 @@ const Dashboard = () => {
         const newCart = cartProduct.filter((product, ind) => ind !== index);
         setCartProduct(newCart);
     };
-
-    // Handle purchase
     const handlePurchase = () => {
-        const purchase =cartProduct.filter(product=>product.product_id !==product.product_id)
-        setCartProduct(purchase);
-        alert('Purchased');
+        if (cartProduct.length > 0) {
+            setPurchaseAmount(totalPrice);
+            const modal = document.getElementById('modal');
+            modal.showModal();
+            setCartProduct([]);
+        } else {
+            alert("Your cart is empty!");
+        }
     };
 
     return (
@@ -40,7 +46,7 @@ const Dashboard = () => {
                 <div className='flex justify-end items-center'>
                     <h2>Total Cost: ${totalPrice}</h2>
                     <button onClick={sortByPrice} className='btn'>Sort by Price</button>
-                    <button onClick={handlePurchase}>Purchase</button>
+                    <button onClick={handlePurchase} id='purchasebtn' className='btn'>Purchase</button>
                 </div>
             )}
             <div>
@@ -67,6 +73,33 @@ const Dashboard = () => {
                         ))}
                     </div>
                 )}
+            </div>
+            {/* Modal */}
+            <div>
+                {/* <dialog id="modal" className="modal modal-bottom sm:modal-middle">
+                    <div className="modal-box">
+                        <h3 className="font-bold text-lg">Purchase Complete</h3>
+                        <p className="py-4">Your total purchase amount is ${purchaseAmount}</p>
+                        <div className="modal-action">
+                            <button className="btn" onClick={() => document.getElementById('modal').close()}>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </dialog> */}
+                {/* Open the modal using document.getElementById('ID').showModal() method */}
+                <dialog id="modal" className="modal modal-bottom sm:modal-middle">
+                    <div className="modal-box">
+                        <h3 className="font-bold text-lg">Hello!</h3>
+                        <p className="py-4">Your total purchase amount is ${purchaseAmount}</p>
+                        <div className="modal-action">
+                            <form method="dialog">
+                                {/* if there is a button in form, it will close the modal */}
+                                <button className="btn">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
             </div>
         </div>
     );

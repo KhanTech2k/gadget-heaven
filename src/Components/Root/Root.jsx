@@ -11,7 +11,7 @@ const Root = () => {
     const [cartProduct, setCartProduct] = useState([]);
     const [wishProduct, setWishProduct]= useState([])
     return (
-        <div>
+        <div className='bg-[#F7F7F7]'>
           <CartProduct.Provider value={[cartProduct, setCartProduct]}>
             <WishProduct.Provider value={[wishProduct, setWishProduct]}>
             <NavBar></NavBar>

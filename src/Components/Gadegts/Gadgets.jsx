@@ -10,7 +10,6 @@ const Gadgets = () => {
     },[])
     return (
         <div>
-            <h2>Total gadgets: {gadgets.length}</h2>
             <div className='grid grid-cols-3 gap-8'>
                 {
                     gadgets.map(gadget=> <Gadget gadget={gadget}></Gadget>)

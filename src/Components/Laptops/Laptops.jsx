@@ -6,18 +6,20 @@ import Banner from '../Banner/Banner';
 
 const Laptops = () => {
     const gadgets = useLoaderData();
-    const laptops= gadgets.filter(gadget=>  gadget.category === 'Laptops');
+    const laptops = gadgets.filter(gadget => gadget.category === 'Laptops');
     return (
-        
+
         <div>
             <Banner></Banner>
             <h2 className='text-4xl font-semibold text-center'>Explore Cutting-Edge Gadgets</h2>
-            <div className='flex gap-20'>
-            <Category></Category>
-            {
-               laptops.map(gadget=> <Laptop gadget={gadget}></Laptop>)
-            }
-        </div>
+            <div className='flex gap-20 mt-16'>
+                <Category></Category>
+                <div className='grid grid-cols-3 gap-8' >
+                    {
+                        laptops.map(gadget => <Laptop gadget={gadget}></Laptop>)
+                    }
+                </div>
+            </div>
         </div>
     );
 };

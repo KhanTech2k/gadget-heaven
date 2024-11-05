@@ -2,7 +2,7 @@
     {
         "product_id": "P001",
         "product_title": "Samsung Galaxy S23 Ultra",
-        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "product_image": "https://i.ibb.co.com/gdJYcfC/Galaxy-S23-Ultra.png",
         "category": "Smartphones",
         "price": 1200,
         "description": "Powerful smartphone with a stunning display and excellent camera performance.",
@@ -21,7 +21,7 @@
     {
         "product_id": "P002",
         "product_title": "iPhone 15 Pro Max",
-        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "product_image": "https://i.ibb.co.com/cFbTCfG/65038654434d0-i-Phone-15-Pro-Natural-titanium-png.png",
         "category": "Smartphones",
         "price": 1299,
         "description": "Apple's latest smartphone with a powerful A17 chip and advanced camera system.",
@@ -40,7 +40,7 @@
     {
         "product_id": "P003",
         "product_title": "Google Pixel 8 Pro",
-        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "product_image": "https://i.ibb.co.com/rGWQ8R2/Google-Pixel-8-Pro-1.webp",
         "category": "Smartphones",
         "price": 999,
         "description": "Experience the best of Google with advanced AI features and top-tier camera quality.",
@@ -59,7 +59,7 @@
     {
         "product_id": "P004",
         "product_title": "OnePlus 11",
-        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "product_image": "https://i.ibb.co.com/QHRHwz5/07643db2d15e1fb0284f9b0885cb2d76.png",
         "category": "Smartphones",
         "price": 849,
         "description": "High-performance phone with ultra-fast charging and flagship performance.",
@@ -78,7 +78,7 @@
     {
         "product_id": "P005",
         "product_title": "Sony Xperia 1 V",
-        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "product_image": "https://i.ibb.co.com/Sfqw30k/sony-xperia-1-iv-white-1-1200x1200.png",
         "category": "Smartphones",
         "price": 1099,
         "description": "Flagship smartphone with pro-grade photography features and 4K display.",
@@ -97,7 +97,7 @@
     {
         "product_id": "P006",
         "product_title": "Xiaomi Mi 13 Pro",
-        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "product_image": "https://i.ibb.co.com/BqxNtBv/Xiaomi-13-Pro-Ceramic-Black-4613.jpg",
         "category": "Smartphones",
         "price": 949,
         "description": "Powerful flagship smartphone with advanced Leica-powered camera.",
@@ -116,7 +116,7 @@
     {
         "product_id": "P007",
         "product_title": "Dell XPS 13",
-        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "product_image": "https://i.ibb.co.com/sJ933Pq/1-12-2.png",
         "category": "Laptops",
         "price": 1350,
         "description": "Lightweight and powerful ultrabook with a stunning InfinityEdge display.",
@@ -135,7 +135,7 @@
     {
         "product_id": "P008",
         "product_title": "MacBook Air M2",
-        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "product_image": "https://i.ibb.co.com/hgdk1ZJ/silver-macbook-air-m2-2022-8de-MAv3-600.jpg",
         "category": "Laptops",
         "price": 1199,
         "description": "Slim and lightweight laptop powered by Apple's M2 chip for seamless performance.",
@@ -154,7 +154,7 @@
     {
         "product_id": "P009",
         "product_title": "Sony WH-1000XM5",
-        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "product_image": "https://i.ibb.co.com/ZYYJWvj/Sony-WH-1000-XM5-front-black-Custom-mac-BD.webp",
         "category": "Headphones",
         "price": 399,
         "description": "Industry-leading noise-canceling headphones with superior sound quality.",
@@ -172,8 +172,8 @@
     },
     {
         "product_id": "P010",
-        "product_title": "Bose QuietComfort Earbuds II",
-        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "product_title": "Bose QC Earbuds II",
+        "product_image": "https://i.ibb.co.com/1sxKNd8/COM-1750-QCEBII-RT-2000x2000-Dynamic-Angle-black-RGB-psd.webp",
         "category": "Headphones",
         "price": 299,
         "description": "True wireless earbuds with customizable noise cancellation and superior comfort.",

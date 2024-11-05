@@ -11,11 +11,13 @@ const Smartphones = () => {
         <div>
             <Banner></Banner>
             <h2 className='text-4xl font-semibold text-center'>Explore Cutting-Edge Gadgets</h2>
-            <div className='flex gap-20'>
+            <div className='flex gap-20 mt-16'>
             <Category></Category>
+            <div className='grid grid-cols-3 gap-8'>
             {
                phones.map(gadget=> <Smartphone gadget={gadget}></Smartphone>)
             }
+            </div>
         </div>
         </div>
     );
