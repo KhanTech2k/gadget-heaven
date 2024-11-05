@@ -1,0 +1,192 @@
+[
+    {
+        "product_id": "P001",
+        "product_title": "Samsung Galaxy S23 Ultra",
+        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "category": "Smartphones",
+        "price": 1200,
+        "description": "Powerful smartphone with a stunning display and excellent camera performance.",
+        "specification": [
+            "6.8-inch QHD+ Dynamic AMOLED 2X display",
+            "Snapdragon 8 Gen 2",
+            "200MP Quad Camera",
+            "5000mAh Battery",
+            "1TB storage option"
+        ],
+        "availability": true,
+        "rating": 4.9,
+        "brand": "Samsung",
+        "colors_available": ["Phantom Black", "Green", "Lavender"]
+    },
+    {
+        "product_id": "P002",
+        "product_title": "iPhone 15 Pro Max",
+        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "category": "Smartphones",
+        "price": 1299,
+        "description": "Apple's latest smartphone with a powerful A17 chip and advanced camera system.",
+        "specification": [
+            "6.7-inch Super Retina XDR display",
+            "A17 Bionic chip",
+            "48MP Main Camera",
+            "LiDAR Scanner",
+            "Up to 1TB storage"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "brand": "Apple",
+        "colors_available": ["Space Black", "Silver", "Titanium Blue"]
+    },
+    {
+        "product_id": "P003",
+        "product_title": "Google Pixel 8 Pro",
+        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "category": "Smartphones",
+        "price": 999,
+        "description": "Experience the best of Google with advanced AI features and top-tier camera quality.",
+        "specification": [
+            "6.7-inch LTPO OLED display",
+            "Google Tensor G3",
+            "50MP Wide Camera",
+            "Face Unlock",
+            "12GB RAM, 512GB storage"
+        ],
+        "availability": true,
+        "rating": 4.6,
+        "brand": "Google",
+        "colors_available": ["Obsidian", "Porcelain", "Mint"]
+    },
+    {
+        "product_id": "P004",
+        "product_title": "OnePlus 11",
+        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "category": "Smartphones",
+        "price": 849,
+        "description": "High-performance phone with ultra-fast charging and flagship performance.",
+        "specification": [
+            "6.7-inch AMOLED display",
+            "Snapdragon 8 Gen 2",
+            "50MP Main Camera",
+            "5000mAh Battery",
+            "80W SuperVOOC charging"
+        ],
+        "availability": false,
+        "rating": 4.7,
+        "brand": "OnePlus",
+        "colors_available": ["Titan Black", "Eternal Green"]
+    },
+    {
+        "product_id": "P005",
+        "product_title": "Sony Xperia 1 V",
+        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "category": "Smartphones",
+        "price": 1099,
+        "description": "Flagship smartphone with pro-grade photography features and 4K display.",
+        "specification": [
+            "6.5-inch 4K OLED display",
+            "Snapdragon 8 Gen 2",
+            "48MP Triple Camera",
+            "IP68 Water Resistance",
+            "256GB storage"
+        ],
+        "availability": true,
+        "rating": 4.5,
+        "brand": "Sony",
+        "colors_available": ["Black", "Silver"]
+    },
+    {
+        "product_id": "P006",
+        "product_title": "Xiaomi Mi 13 Pro",
+        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "category": "Smartphones",
+        "price": 949,
+        "description": "Powerful flagship smartphone with advanced Leica-powered camera.",
+        "specification": [
+            "6.73-inch QHD+ AMOLED display",
+            "Snapdragon 8 Gen 2",
+            "50MP Triple Camera with Leica optics",
+            "4820mAh Battery",
+            "120W wired charging"
+        ],
+        "availability": false,
+        "rating": 4.4,
+        "brand": "Xiaomi",
+        "colors_available": ["Ceramic Black", "Ceramic White"]
+    },
+    {
+        "product_id": "P007",
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "category": "Laptops",
+        "price": 1350,
+        "description": "Lightweight and powerful ultrabook with a stunning InfinityEdge display.",
+        "specification": [
+            "13.4-inch FHD+ InfinityEdge display",
+            "Intel Core i7-1355U",
+            "16GB LPDDR5 RAM",
+            "512GB SSD",
+            "Intel Iris Xe Graphics"
+        ],
+        "availability": true,
+        "rating": 4.7,
+        "brand": "Dell",
+        "colors_available": ["Platinum Silver"]
+    },
+    {
+        "product_id": "P008",
+        "product_title": "MacBook Air M2",
+        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "category": "Laptops",
+        "price": 1199,
+        "description": "Slim and lightweight laptop powered by Apple's M2 chip for seamless performance.",
+        "specification": [
+            "13.6-inch Liquid Retina display",
+            "Apple M2 chip",
+            "8GB RAM",
+            "256GB SSD",
+            "MagSafe charging port"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "brand": "Apple",
+        "colors_available": ["Space Gray", "Silver", "Starlight", "Midnight"]
+    },
+    {
+        "product_id": "P009",
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "category": "Headphones",
+        "price": 399,
+        "description": "Industry-leading noise-canceling headphones with superior sound quality.",
+        "specification": [
+            "Active Noise Cancellation",
+            "30 hours battery life",
+            "Quick charge support",
+            "Touch controls",
+            "Bluetooth 5.2"
+        ],
+        "availability": true,
+        "rating": 4.9,
+        "brand": "Sony",
+        "colors_available": ["Black", "Silver"]
+    },
+    {
+        "product_id": "P010",
+        "product_title": "Bose QuietComfort Earbuds II",
+        "product_image": "https://i.ibb.co.com/925Fdgf/IMG-20241029-235846.jpg",
+        "category": "Headphones",
+        "price": 299,
+        "description": "True wireless earbuds with customizable noise cancellation and superior comfort.",
+        "specification": [
+            "Customizable noise cancellation",
+            "6-hour battery life per charge",
+            "IPX4 water resistance",
+            "Bluetooth 5.3",
+            "Three eartip sizes"
+        ],
+        "availability": false,
+        "rating": 4.5,
+        "brand": "Bose",
+        "colors_available": ["Triple Black", "Soapstone"]
+    }
+]
