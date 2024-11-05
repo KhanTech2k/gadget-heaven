@@ -13,16 +13,6 @@ const Details = () => {
     const data=useLoaderData();
     const product = data.find(product=>product.product_id ===product_id);
     const {product_title,product_image}=product;
-    // const [quantity, setQuantity]=useState(0)
-    // const handleAddToCart = ()=>{
-    //     setQuantity((quantity)=> quantity+1);
-    //     console.log(quantity)
-    //     return setQuantity;
-
-    // };
-    // const handleAddToCartC = () =>{
-
-    // }
     return (
         <div>
             <h2>{product_title}</h2>

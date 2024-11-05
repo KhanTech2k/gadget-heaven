@@ -1,7 +1,5 @@
 import React from 'react';
 import Gadgets from '../Gadegts/Gadgets';
-import { Link, Outlet } from 'react-router-dom';
-import Gadget from '../Gadget/Gadget';
 import Category from '../Category/Category';
 import Banner from '../Banner/Banner';
 

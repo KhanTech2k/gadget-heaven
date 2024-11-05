@@ -3,11 +3,9 @@ import { NavLink } from 'react-router-dom';
 import { CartProduct } from '../Root/Root';
 import { WishProduct } from '../Root/Root';
 
-const NavBar = ({setQuantity}) => {
+const NavBar = () => {
     const [cartProduct, setCartProduct] = useContext(CartProduct);
     const [wishProduct, setWishProduct] = useContext((WishProduct));
-    // const a=setQuantity;
-    console.log(cartProduct);
     return (
         <section>
             <div className="navbar bg-base-100">
