@@ -106,7 +106,7 @@ const Dashboard = () => {
                     {activeTab === "wish" && (
                         <div>
                             {wishProduct.map((product, index) => (
-                                <div className='flex flex-col gap-4 justify-between items-center border rounded-2xl p-5 mb-5' key={index}>
+                                <div className='flex flex-col lg:flex-row gap-4 justify-between items-center border rounded-2xl p-5 mb-5' key={index}>
                                     <div className='flex items-center gap-5'>
                                         <img className='w-32 h-36 object-cover' src={product.product_image} alt={product.product_title} />
                                         <div className='flex flex-col'>
@@ -115,7 +115,7 @@ const Dashboard = () => {
                                             <p className='font-semibold'>Price:${product.price}</p>
                                             <button className='btn px-4 py-2 bg-[#9538E2] text-white rounded-3xl flex lg:w-3/12 space-x-2' onClick={() => {
                                                 setCartProduct([...cartProduct, product]);
-                                                toast.success("Congratulations! Product added to cart");
+                                                toast.success("Successfully Product added to cart.");
                                             }}>
                                                 Add to cart <FaCartShopping />
                                             </button>

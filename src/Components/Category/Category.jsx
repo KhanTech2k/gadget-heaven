@@ -12,6 +12,7 @@ const Category = () => {
                 <NavLink to="/laptops" className={({ isActive }) => `btn rounded-3xl text-lg text-[#09080F99] w-full font-medium ${isActive ? 'bg-[#9538E2]' : 'bg-[#09080F0D]'}`}>Laptops</NavLink>
 
                 <NavLink to="/headphones" className={({ isActive }) => `btn rounded-3xl text-lg text-[#09080F99] w-full font-medium ${isActive ? 'bg-[#9538E2]' : 'bg-[#09080F0D]'}`} >Headphones</NavLink>
+                <NavLink to="/watches" className={({ isActive }) => `btn rounded-3xl text-lg text-[#09080F99] w-full font-medium ${isActive ? 'bg-[#9538E2]' : 'bg-[#09080F0D]'}`} >Watches</NavLink>
             </div>
         </div>
     );

@@ -16,6 +16,7 @@ import Home from './Components/Home/Home.jsx';
 import Category from './Components/Category/Category.jsx';
 import Smartphones from './Components/Smartphones/Smartphones.jsx';
 import Faq from './Components/Faq/Faq.jsx';
+import Watches from './Components/Watches/Watches.jsx';
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: '/details',
         element: <Details></Details>
+      },
+      {
+        path:'/watches',
+        element: <Watches></Watches>
       }
     ]
   },
