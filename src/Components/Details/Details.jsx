@@ -4,24 +4,28 @@ import { CartProduct } from '../Root/Root';
 import { WishProduct } from '../Root/Root';
 import { FaCartShopping } from 'react-icons/fa6';
 import { CiHeart } from 'react-icons/ci';
+import 'react-toastify/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Details = () => {
-    // accessing cart products
     const [cartProduct, setCartProduct] = useContext(CartProduct);
     const [wishProduct, setWishProduct] = useContext(WishProduct);
-    
-    // Add state to track if product is added to the wish list
     const [isWishListed, setIsWishListed] = useState(false);
-    
+
     const { product_id } = useParams();
     const data = useLoaderData();
     const product = data.find(product => product.product_id === product_id);
     const { product_title, product_image, price, availability, description, specification, rating } = product;
 
-    // Handle adding product to wish list
+    const handleAddToCart = () => {
+        setCartProduct([...cartProduct, product]);
+        toast.success("Congratulations! Product added to cart");
+    };
+
     const handleAddToWishList = () => {
         setWishProduct([...wishProduct, product]);
-        setIsWishListed(true); 
+        setIsWishListed(true);
+        toast.success("Added to wishlist!");
     };
 
     return (
@@ -50,14 +54,18 @@ const Details = () => {
                         </div>
                         <p className='font-bold  my-2'>Rating: {rating}</p>
                         <div className='flex gap-4'>
-                            <button className='btn px-4 py-2 bg-[#9538E2] text-white rounded-3xl flex items-center space-x-2' onClick={() => setCartProduct([...cartProduct, product])}>
-                                Add to cart <FaCartShopping></FaCartShopping>
+                            <button
+                                className='btn px-4 py-2 bg-[#9538E2] text-white rounded-3xl flex items-center space-x-2'
+                                onClick={handleAddToCart}>
+                                Add to cart <FaCartShopping />
                             </button>
-                            <button 
-                                className={`btn btn-circle border border-gray-300 rounded-full ${isWishListed ? 'bg-gray-400 text-gray-200' : 'bg-gray-300 text-gray-500'} text-center text-xl`} 
-                                onClick={handleAddToWishList} 
-                                disabled={isWishListed}><CiHeart></CiHeart>
+                            <button
+                                className={`btn btn-circle border border-gray-300 rounded-full ${isWishListed ? 'bg-gray-400 text-gray-200' : 'bg-gray-300 text-gray-500'} text-center text-xl`}
+                                onClick={handleAddToWishList}
+                                disabled={isWishListed}>
+                                <CiHeart />
                             </button>
+                            <ToastContainer position='top-center' autoClose={2000} />
                         </div>
                     </div>
                 </div>

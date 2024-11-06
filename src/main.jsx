@@ -15,6 +15,7 @@ import Details from './Components/Details/Details.jsx';
 import Home from './Components/Home/Home.jsx';
 import Category from './Components/Category/Category.jsx';
 import Smartphones from './Components/Smartphones/Smartphones.jsx';
+import Faq from './Components/Faq/Faq.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path:'/statistics',
         element: <Statistics></Statistics>
+      },
+      {
+        path: '/faq',
+        element: <Faq></Faq>
       },
       {
         path: 'product',

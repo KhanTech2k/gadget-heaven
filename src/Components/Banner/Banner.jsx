@@ -16,7 +16,7 @@ const Banner = () => {
                 </div>
             </div>
             <div className='flex justify-center relative -top-56 rounded-xl '>
-                <div className='w-8/12 hero-overlay p-4 rounded-xl'>
+                <div className='w-8/12 hero-overlay p-4 rounded-xl  bg-opacity-20'>
                     <img className='rounded-xl w-full' src={bannerimage} alt="" />
                 </div>
             </div>
