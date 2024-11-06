@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { CartProduct, WishProduct } from '../Root/Root';
-import { TiDeleteOutline } from 'react-icons/ti';
 import { FaCartShopping } from 'react-icons/fa6';
-
+import sorticon from '../../assets/download.png';
+import deleteicon from '../../assets/delete.png';
+import modalicon from '../../assets/Group.png'
 const Dashboard = () => {
     const [cartProduct, setCartProduct] = useContext(CartProduct);
     const [wishProduct, setWishProduct] = useContext(WishProduct);
@@ -62,7 +63,7 @@ const Dashboard = () => {
                         {activeTab === "cart" && (
                             <div className='flex justify-end items-center gap-5'>
                                 <h2 className='font-bold'>Total Cost: ${totalPrice}</h2>
-                                <button onClick={sortByPrice} className='btn rounded-3xl border-[#9538E2] text-[#9538E2] bg-white'>Sort by Price</button>
+                                <button onClick={sortByPrice} className='btn rounded-3xl border-[#9538E2] text-[#9538E2] bg-white'>Sort by Price <span><img src={sorticon} alt="" /></span> </button>
                                 <button onClick={handlePurchase} id='purchasebtn' className='btn border-none rounded-3xl text-base text-white px-5 bg-[#9538E2]'>Purchase</button>
                             </div>
                         )}
@@ -81,7 +82,7 @@ const Dashboard = () => {
                                             <p className='font-semibold'>Price:${product.price}</p>
                                         </div>
                                     </div>
-                                    <button onClick={() => handleDelete(index)} className='btn'><TiDeleteOutline></TiDeleteOutline> </button>
+                                    <button onClick={() => handleDelete(index)} className=''><img src={deleteicon} alt="" /> </button>
                                 </div>
                             ))}
                         </div>
@@ -101,7 +102,7 @@ const Dashboard = () => {
                                             </button>
                                         </div>
                                     </div>
-                                    <button onClick={() => handleDeleteWishList(index)} className='btn'><TiDeleteOutline></TiDeleteOutline> </button>
+                                    <button onClick={() => handleDeleteWishList(index)} className=''><img src={deleteicon} alt="" /> </button>
                                 </div>
                             ))}
                         </div>
@@ -110,12 +111,14 @@ const Dashboard = () => {
                 {/* Modal */}
                 <div>
                     <dialog id="modal" className="modal modal-bottom sm:modal-middle">
-                        <div className="modal-box">
-                            <h3 className="font-bold text-lg">Hello!</h3>
-                            <p className="py-4">Your total purchase amount is ${purchaseAmount}</p>
+                        <div className="modal-box flex flex-col justify-center items-center">
+                            <img src={modalicon} alt="" />
+                            <h3 className="font-bold text-2xl text-[#09080F]">Payment Sucessfully</h3>
+                            <p className='text-[#09080F99] font-medium'>Thanks for purchasing </p>
+                            <p className="py-4 text-[#09080F99] font-medium">Total: ${purchaseAmount}</p>
                             <div className="modal-action">
                                 <form method="dialog">
-                                    <button className="btn">Close</button>
+                                    <button className="btn w-full">Close</button>
                                 </form>
                             </div>
                         </div>

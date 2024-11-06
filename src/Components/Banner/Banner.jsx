@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import bannerimage from '../../assets/banner.jpg'
 
 const Banner = () => {
     return (
@@ -16,7 +17,7 @@ const Banner = () => {
             </div>
             <div className='flex justify-center relative -top-56 rounded-xl '>
                 <div className='w-8/12 hero-overlay p-4 rounded-xl'>
-                    <img className='rounded-xl w-full' src="/src/assets/banner.jpg" alt="" />
+                    <img className='rounded-xl w-full' src={bannerimage} alt="" />
                 </div>
             </div>
         </div>
