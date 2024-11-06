@@ -21,7 +21,7 @@ const NavBar = () => {
 
     return (
         <section className="mt-4">
-            <div className={`navbar rounded-xl py-8 px-8 relative ${isHomePage ? 'bg-[#9538E2] text-white' : 'bg-white text-black'}`}>
+            <div className={`navbar rounded-xl py-8 lg:px-8 relative ${isHomePage ? 'bg-[#9538E2] text-white' : 'bg-white text-black'}`}>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,7 +42,7 @@ const NavBar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                            className="menu menu-sm dropdown-content bg-base-100 text-black rounded-box z-[1] mt-3 w-52 p-2 shadow"
                         >
                             {links}
                         </ul>

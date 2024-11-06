@@ -1,10 +1,11 @@
 import React from 'react';
 
 const Faq = () => {
+    document.title= "Gadget Heaven | Faq";
     return (
         <div>
             <div className='flex justify-center bg-[#9538E2] py-10'>
-                <div className='text-center  mt-5 py-5 w-7/12'>
+                <div className='text-center  mt-5 py-5 w-9/12 lg:w-7/12'>
                     <h1 className='text-5xl font-bold text-white '>Frequently Asked Questions.</h1>
                     <p className='mx-auto text-gray-200 m-4'>FAQ (Frequently Asked Questions) is a section that provides quick answers to common questions, helping users find information easily and reducing the need for customer support.</p>
                 </div>

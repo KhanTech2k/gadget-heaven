@@ -10,9 +10,9 @@ const Gadgets = () => {
     },[])
     return (
         <div>
-            <div className='grid grid-cols-3 gap-8'>
+            <div className=' flex flex-col lg:grid  lg:grid-cols-3 gap-8'>
                 {
-                    gadgets.map(gadget=> <Gadget gadget={gadget}></Gadget>)
+                    gadgets.map(gadget=> <Gadget key={gadget.product_id} gadget={gadget}></Gadget>)
                 }
             </div>
         </div>

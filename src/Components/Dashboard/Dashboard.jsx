@@ -9,6 +9,7 @@ import 'react-toastify/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 
 const Dashboard = () => {
+    document.title = "Gadget Heaven | Dashboard";
     const [cartProduct, setCartProduct] = useContext(CartProduct);
     const [wishProduct, setWishProduct] = useContext(WishProduct);
     const [activeTab, setActiveTab] = useState("cart");
@@ -54,7 +55,7 @@ const Dashboard = () => {
     return (
         <div>
             <div className='flex bg-[#9538E2] justify-center'>
-                <div className='text-center  mt-5 w-7/12 py-10'>
+                <div className='text-center  mt-5 w-10/12 lg:w-7/12 py-10'>
                     <h1 className='text-5xl font-bold text-white'>Dashboard</h1>
                     <p className='mx-auto text-gray-200 m-4'>The Dashboard provides users with a centralized view of their activities, including managing their cart, wishlist, and purchase history. It offers quick access to important actions and insights for a seamless shopping experience.</p>
                     <div className='flex justify-center'>
@@ -67,15 +68,15 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
-            <div className='px-10'>
-                <div className='flex justify-between items-center mt-10 mb-10'>
+            <div className='lg:px-10'>
+                <div className='flex flex-col lg:flex-row justify-between items-center mt-10 mb-10'>
                     <div className='text-2xl font-bold'>
                         <h1>{activeTab === "cart" ? "Cart" : "Wish List"}</h1>
                     </div>
                     <div>
                         {activeTab === "cart" && (
-                            <div className='flex justify-end items-center gap-5'>
-                                <h2 className='font-bold'>Total Cost: ${totalPrice}</h2>
+                            <div className='flex flex-col lg:flex-row justify-end items-center gap-5'>
+                                <h2 className='font-bold'>Total Amount: ${totalPrice}</h2>
                                 <button onClick={sortByPrice} className='btn rounded-3xl border-[#9538E2] text-[#9538E2] bg-white'>Sort by Price <span><img src={sorticon} alt="" /></span> </button>
                                 <button onClick={handlePurchase} id='purchasebtn' disabled={cartProduct.length === 0} className={`btn border-none rounded-3xl text-base text-white px-5 ${cartProduct.length === 0 ? "bg-gray-400 cursor-not-allowed" : "bg-[#9538E2]"}`}>
                                     Purchase
@@ -88,7 +89,7 @@ const Dashboard = () => {
                     {activeTab === "cart" && (
                         <div>
                             {cartProduct.map((product, index) => (
-                                <div className='flex justify-between items-center border rounded-2xl p-5 mb-5' key={index}>
+                                <div className='flex flex-col lg:flex-row gap-6 justify-between items-center border rounded-2xl p-5 mb-5' key={index}>
                                     <div className='flex items-center gap-5'>
                                         <img className='w-32 h-36 object-cover' src={product.product_image} alt={product.product_title} />
                                         <div className='flex flex-col'>
@@ -105,14 +106,14 @@ const Dashboard = () => {
                     {activeTab === "wish" && (
                         <div>
                             {wishProduct.map((product, index) => (
-                                <div className='flex justify-between items-center border rounded-2xl p-5 mb-5' key={index}>
+                                <div className='flex flex-col gap-4 justify-between items-center border rounded-2xl p-5 mb-5' key={index}>
                                     <div className='flex items-center gap-5'>
                                         <img className='w-32 h-36 object-cover' src={product.product_image} alt={product.product_title} />
                                         <div className='flex flex-col'>
                                             <h1 className='font-bold lg:text-xl'>{product.product_title}</h1>
                                             <p>{product.description}</p>
                                             <p className='font-semibold'>Price:${product.price}</p>
-                                            <button className='btn px-4 py-2 bg-[#9538E2] text-white rounded-3xl flex w-3/12 space-x-2' onClick={() => {
+                                            <button className='btn px-4 py-2 bg-[#9538E2] text-white rounded-3xl flex lg:w-3/12 space-x-2' onClick={() => {
                                                 setCartProduct([...cartProduct, product]);
                                                 toast.success("Congratulations! Product added to cart");
                                             }}>
