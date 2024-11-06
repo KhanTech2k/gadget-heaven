@@ -13,7 +13,7 @@
             "5000mAh Battery",
             "1TB storage option"
         ],
-        "availability": true,
+        "availability": "In Stock",
         "rating": 4.9,
         "brand": "Samsung",
         "colors_available": ["Phantom Black", "Green", "Lavender"]
@@ -32,7 +32,7 @@
             "LiDAR Scanner",
             "Up to 1TB storage"
         ],
-        "availability": true,
+        "availability": "In Stock",
         "rating": 4.8,
         "brand": "Apple",
         "colors_available": ["Space Black", "Silver", "Titanium Blue"]
@@ -51,7 +51,7 @@
             "Face Unlock",
             "12GB RAM, 512GB storage"
         ],
-        "availability": true,
+        "availability": "In Stock",
         "rating": 4.6,
         "brand": "Google",
         "colors_available": ["Obsidian", "Porcelain", "Mint"]
@@ -70,7 +70,7 @@
             "5000mAh Battery",
             "80W SuperVOOC charging"
         ],
-        "availability": false,
+        "availability": "Stock Out",
         "rating": 4.7,
         "brand": "OnePlus",
         "colors_available": ["Titan Black", "Eternal Green"]
@@ -89,7 +89,7 @@
             "IP68 Water Resistance",
             "256GB storage"
         ],
-        "availability": true,
+        "availability": "In Stock",
         "rating": 4.5,
         "brand": "Sony",
         "colors_available": ["Black", "Silver"]
@@ -108,7 +108,7 @@
             "4820mAh Battery",
             "120W wired charging"
         ],
-        "availability": false,
+        "availability": "Stock Out",
         "rating": 4.4,
         "brand": "Xiaomi",
         "colors_available": ["Ceramic Black", "Ceramic White"]
@@ -127,7 +127,7 @@
             "512GB SSD",
             "Intel Iris Xe Graphics"
         ],
-        "availability": true,
+        "availability": "In Stock",
         "rating": 4.7,
         "brand": "Dell",
         "colors_available": ["Platinum Silver"]
@@ -146,7 +146,7 @@
             "256GB SSD",
             "MagSafe charging port"
         ],
-        "availability": true,
+        "availability": "In Stock",
         "rating": 4.8,
         "brand": "Apple",
         "colors_available": ["Space Gray", "Silver", "Starlight", "Midnight"]
@@ -165,7 +165,7 @@
             "Touch controls",
             "Bluetooth 5.2"
         ],
-        "availability": true,
+        "availability": "In Stock",
         "rating": 4.9,
         "brand": "Sony",
         "colors_available": ["Black", "Silver"]
@@ -184,7 +184,7 @@
             "Bluetooth 5.3",
             "Three eartip sizes"
         ],
-        "availability": false,
+        "availability": "Stock Out",
         "rating": 4.5,
         "brand": "Bose",
         "colors_available": ["Triple Black", "Soapstone"]

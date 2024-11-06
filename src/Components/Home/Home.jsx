@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div >
             <Banner></Banner>
-            <h2 className='text-4xl font-semibold text-center mt-0'>Explore Cutting-Edge Gadgets</h2>
+            <h2 className='text-4xl font-semibold text-center -mt-24'>Explore Cutting-Edge Gadgets</h2>
             <div className='flex gap-10 my-16  px-10'>
                 <div>
                     <Category></Category>

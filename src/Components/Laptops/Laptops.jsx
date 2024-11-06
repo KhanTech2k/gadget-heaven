@@ -12,7 +12,7 @@ const Laptops = () => {
         <div>
             <Banner></Banner>
             <h2 className='text-4xl font-semibold text-center'>Explore Cutting-Edge Gadgets</h2>
-            <div className='flex gap-20 mt-16'>
+            <div className='flex gap-10 my-16  px-10'>
                 <Category></Category>
                 <div className='grid grid-cols-3 gap-8' >
                     {

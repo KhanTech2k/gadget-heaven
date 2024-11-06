@@ -1,11 +1,9 @@
-// import React from 'react';
 import { Link } from 'react-router-dom';
-// import banner from ('../../assets/banner.jpg')
 
 const Banner = () => {
     return (
         <div>
-            <div className='hero bg-[#9538E2] p-10 rounded-xl ' >
+            <div className='hero bg-[#9538E2] p-10 rounded-xl relative bottom-6' >
                 <div className='w-full flex justify-center text-center'>
                     <div className='w-7/12 '>
                         <h2 className='text-5xl text-[#FFFFFF] font-semibold mb-6'>Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h2>

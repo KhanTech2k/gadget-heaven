@@ -1,5 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { CartProduct, WishProduct } from '../Root/Root';
+import { TiDeleteOutline } from 'react-icons/ti';
+import { FaCartShopping } from 'react-icons/fa6';
 
 const Dashboard = () => {
     const [cartProduct, setCartProduct] = useContext(CartProduct);
@@ -20,6 +22,10 @@ const Dashboard = () => {
         const newCart = cartProduct.filter((product, ind) => ind !== index);
         setCartProduct(newCart);
     };
+    const handleDeleteWishList = (index) => {
+        const newCart = wishProduct.filter((product, ind) => ind !== index);
+        setWishProduct(newCart);
+    };
     const handlePurchase = () => {
         if (cartProduct.length > 0) {
             setPurchaseAmount(totalPrice);
@@ -33,73 +39,88 @@ const Dashboard = () => {
 
     return (
         <div>
-            <h1>{activeTab === "cart" ? "Cart" : "Wish List"}</h1>
-            <div className='flex justify-center'>
-                <button onClick={() => setActiveTab("cart")} className='btn'>
-                    Cart
-                </button>
-                <button onClick={() => setActiveTab("wish")} className='btn'>
-                    Wish List
-                </button>
-            </div>
-            {activeTab === "cart" && (
-                <div className='flex justify-end items-center'>
-                    <h2>Total Cost: ${totalPrice}</h2>
-                    <button onClick={sortByPrice} className='btn'>Sort by Price</button>
-                    <button onClick={handlePurchase} id='purchasebtn' className='btn'>Purchase</button>
+            <div className='text-center bg-[#9538E2] mt-5 py-5'>
+                <h1 className='text-5xl font-bold text-white'>Dashboard</h1>
+                <p className='mx-auto text-gray-200 m-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non molestias necessitatibus eligendi nulla eum cumque, atque praesentium? Voluptates, id quibusdam.</p>
+                <div className='flex justify-center'>
+                    <button onClick={() => setActiveTab("cart")} className={`btn w-32 lg:w-40 text-base rounded-3xl mr-5 ${activeTab === "cart" ? " bg-white text-[#9538E2]  font-bold" : "bg-[#9538E2] text-white "
+                        }`}>
+                        Cart
+                    </button>
+                    <button onClick={() => setActiveTab("wish")} className={`btn w-32 lg:w-40 text-base rounded-3xl ${activeTab === "wish" ? " bg-white text-[#9538E2] font-bold" : "bg-[#9538E2] text-white "
+                        }`}>
+                        Wish List
+                    </button>
                 </div>
-            )}
-            <div>
-                {activeTab === "cart" && (
-                    <div>
-                        {cartProduct.map((product, index) => (
-                            <div key={index} className='flex justify-between'>
-                                <img src={product.product_image} alt={product.product_title} width="50" />
-                                <h1>{product.product_title}</h1>
-                                <p>${product.price}</p>
-                                <button onClick={() => handleDelete(index)} className='btn'>Delete</button>
-                            </div>
-                        ))}
-                    </div>
-                )}
-                {activeTab === "wish" && (
-                    <div>
-                        {wishProduct.map((product) => (
-                            <div key={product.product_id} className='flex justify-between'>
-                                <img src={product.product_image} alt={product.product_title} width="50" />
-                                <h1>{product.product_title}</h1>
-                                <p>${product.price}</p>
-                            </div>
-                        ))}
-                    </div>
-                )}
             </div>
-            {/* Modal */}
-            <div>
-                {/* <dialog id="modal" className="modal modal-bottom sm:modal-middle">
-                    <div className="modal-box">
-                        <h3 className="font-bold text-lg">Purchase Complete</h3>
-                        <p className="py-4">Your total purchase amount is ${purchaseAmount}</p>
-                        <div className="modal-action">
-                            <button className="btn" onClick={() => document.getElementById('modal').close()}>
-                                Close
-                            </button>
-                        </div>
+            <div className='px-10'>
+                <div className='flex justify-between items-center mt-10 mb-10'>
+                    <div className='text-2xl font-bold'>
+                        <h1>{activeTab === "cart" ? "Cart" : "Wish List"}</h1>
                     </div>
-                </dialog> */}
-                {/* Open the modal using document.getElementById('ID').showModal() method */}
-                <dialog id="modal" className="modal modal-bottom sm:modal-middle">
-                    <div className="modal-box">
-                        <h3 className="font-bold text-lg">Hello!</h3>
-                        <p className="py-4">Your total purchase amount is ${purchaseAmount}</p>
-                        <div className="modal-action">
-                            <form method="dialog">
-                                {/* if there is a button in form, it will close the modal */}
-                                <button className="btn">Close</button>
-                            </form>
-                        </div>
+                    <div>
+                        {activeTab === "cart" && (
+                            <div className='flex justify-end items-center gap-5'>
+                                <h2 className='font-bold'>Total Cost: ${totalPrice}</h2>
+                                <button onClick={sortByPrice} className='btn rounded-3xl border-[#9538E2] text-[#9538E2] bg-white'>Sort by Price</button>
+                                <button onClick={handlePurchase} id='purchasebtn' className='btn border-none rounded-3xl text-base text-white px-5 bg-[#9538E2]'>Purchase</button>
+                            </div>
+                        )}
                     </div>
-                </dialog>
+                </div>
+                <div>
+                    {activeTab === "cart" && (
+                        <div>
+                            {cartProduct.map((product, index) => (
+                                <div className='flex justify-between items-center border rounded-2xl p-5 mb-5'>
+                                    <div key={index} className='flex items-center gap-5'>
+                                        <img className='w-32 h-36 object-cover' src={product.product_image} alt={product.product_title} />
+                                        <div className='flex flex-col'>
+                                            <h1 className='font-bold lg:text-xl'>{product.product_title}</h1>
+                                            <p>{product.description}</p>
+                                            <p className='font-semibold'>Price:${product.price}</p>
+                                        </div>
+                                    </div>
+                                    <button onClick={() => handleDelete(index)} className='btn'><TiDeleteOutline></TiDeleteOutline> </button>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                    {activeTab === "wish" && (
+                        <div>
+                            {wishProduct.map((product, index) => (
+                                <div className='flex justify-between items-center border rounded-2xl p-5 mb-5'>
+                                    <div key={index} className='flex items-center gap-5'>
+                                        <img className='w-32 h-36 object-cover' src={product.product_image} alt={product.product_title} />
+                                        <div className='flex flex-col'>
+                                            <h1 className='font-bold lg:text-xl'>{product.product_title}</h1>
+                                            <p>{product.description}</p>
+                                            <p className='font-semibold'>Price:${product.price}</p>
+                                            <button className='btn px-4 py-2 bg-[#9538E2] text-white rounded-3xl flex w-3/12 space-x-2' onClick={() => setCartProduct([...cartProduct, product])}>
+                                                Add to cart <FaCartShopping></FaCartShopping>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button onClick={() => handleDeleteWishList(index)} className='btn'><TiDeleteOutline></TiDeleteOutline> </button>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+                {/* Modal */}
+                <div>
+                    <dialog id="modal" className="modal modal-bottom sm:modal-middle">
+                        <div className="modal-box">
+                            <h3 className="font-bold text-lg">Hello!</h3>
+                            <p className="py-4">Your total purchase amount is ${purchaseAmount}</p>
+                            <div className="modal-action">
+                                <form method="dialog">
+                                    <button className="btn">Close</button>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
+                </div>
             </div>
         </div>
     );
